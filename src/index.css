@@ -1,4 +1,5 @@
 :root {
+  
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -11,8 +12,38 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 100vw;
-  height: 100vh;
   user-select: none;
+  
+}
+body{
+  margin: 0;
 }
 
+/* 电脑端适配 (屏幕宽度≥768px) */
+@media (min-width: 768px) {
+  #root {
+    /* 限制内容区域为手机尺寸 */
+    max-width: 480px;
+    /* 水平居中 */
+    margin: 0 auto;
+    /* 垂直方向保留空间 */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    /* 添加视觉区分 */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    /* 保持高度自适应 */
+    /* height: auto; */
+    height: 85vh;
+    /* 圆角增强手机视觉效果 */
+    border-radius: 16px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  #root{
+    width: 100vw ;
+    height: 100vh ;
+    box-sizing: border-box;
+  }
+}

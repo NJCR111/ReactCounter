@@ -291,13 +291,13 @@ function calculate(stack: Stack) {
 
 /*> ----    添加按键音频  ----<*/
 
-
+import buttonAudioFile from '/button.MP3';
 export class ButtonAudio {
     audio: HTMLAudioElement;
     replayAudio: () => void;
     pause: () => void;
     constructor() {
-        this.audio = new Audio('/button.MP3')
+        this.audio = new Audio(buttonAudioFile)
         this.replayAudio = () => {
             this.audio.currentTime = 0; // 重置播放位置
             this.audio.play().catch(e => console.error("播放失败:", e));

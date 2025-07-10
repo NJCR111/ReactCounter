@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "build-n": "vite build",
-    "build-github":"vite build --base=/ReactCounter/dist",
+    "build-github":"vite build --mode github",
     "lint": "eslint .",
     "preview": "vite preview"
   },
